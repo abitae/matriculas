@@ -16,8 +16,8 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/alumno', [AlumnoController::class, 'index'])->name('alumno.index');
-    Route::get('/alumno/{alumno}', [AlumnoController::class, 'edit'])->name('alumno.edit');
-    Route::delete('/alumno', [AlumnoController::class, 'destroy'])->name('alumno.destroy');
+    Route::get('/curso', [CursoController::class, 'index'])->name('curso.index');
+    Route::get('/matricula/{id}', [MatriculaController::class, 'index'])->name('matricula.index');
 });
 
 Route::middleware('auth')->group(function () {

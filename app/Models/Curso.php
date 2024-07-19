@@ -18,4 +18,7 @@ class Curso extends Model
     {
         return $this->hasMany(Matricula::class);
     }
+    public function alumnos() {
+        return $this->belongsToMany(Alumno::class);
+    }
 }

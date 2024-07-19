@@ -24,6 +24,5 @@ class DatabaseSeeder extends Seeder
         ]);
         Alumno::factory(400)->create();
         Curso::factory(10)->create();
-        Matricula::factory(200)->create();
     }
 }

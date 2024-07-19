@@ -11,7 +11,6 @@ class Alumno extends Model
     protected $fillable = [
         'code',
         'full_name',
-        'phone',
         'email',
         'address',
         'isActive',
@@ -19,5 +18,8 @@ class Alumno extends Model
     public function matriculas()
     {
         return $this->hasMany(Matricula::class);
+    }
+    public function cursos() {
+        return $this->belongsToMany(Curso::class);
     }
 }
